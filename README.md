@@ -2,7 +2,7 @@
 ## Fun with algos
 
 #### Implementations
-- Linear Serach
+- Linear Search
 - Binary Search
 - QuickSort
 
