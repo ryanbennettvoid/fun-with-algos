@@ -1,6 +1,11 @@
 
 ## Fun with algos
 
+#### Implementations
+- Linear Serach
+- Binary Search
+- QuickSort
+
 #### Test
 
 ```
