@@ -5,6 +5,7 @@
 - Linear Search
 - Binary Search
 - QuickSort
+- Fibonacci Sequence
 
 #### Test
 
