@@ -11,6 +11,5 @@
 
 ```
 npm install -g tape
-npm install
 npm run test
 ```
