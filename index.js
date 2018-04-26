@@ -3,7 +3,7 @@ module.exports = {
 
   // Linear Search:
   // ---
-  // Source: We've all done this at some point...
+  // Reference: We've all done this at some point...
   // ---
   // Iterate over each item linearly until the target is found.
 
@@ -19,7 +19,7 @@ module.exports = {
 
   // Binary Search:
   // ---
-  // Source: https://en.wikipedia.org/wiki/Binary_search_algorithm
+  // Reference: https://en.wikipedia.org/wiki/Binary_search_algorithm
   // ---
   // "...Given an array A of n elements with values or records 
   // A0, A1, ..., An−1, sorted such that A0 ≤ A1 ≤ ... ≤ An−1, 
@@ -74,7 +74,7 @@ module.exports = {
 
   // Quick Sort:
   // ---
-  // Source: https://www.geeksforgeeks.org/quick-sort/
+  // Reference: https://www.geeksforgeeks.org/quick-sort/
   // ---
   // "...It picks an element as pivot and partitions the 
   // given array around the picked pivot. There are 
@@ -134,7 +134,7 @@ module.exports = {
 
   // Fibonacci Series:
   // ---
-  // Source: https://stackoverflow.com/questions/494594/how-to-write-the-fibonacci-sequence
+  // Reference: https://stackoverflow.com/questions/494594/how-to-write-the-fibonacci-sequence
   // ---
 
   fibonacci: ( () => {
@@ -148,6 +148,65 @@ module.exports = {
     return fib;
 
   } )(),
+
+  // Merge Sort:
+  // ---
+  // Reference: https://en.wikipedia.org/wiki/Merge_sort
+  // ---
+
+  mergeSort: ( () => {
+
+    const merge = ( left, right ) => {
+
+      const result = [];
+
+      while ( left.length > 0 && right.length > 0 ) {
+        if ( left[ 0 ] <= right[ 0 ] ) {
+          result.push( left.shift() );
+        } else {
+          result.push( right.shift() );
+        }
+      }
+
+      // consume any remaining items
+      while ( left.length > 0 ) {
+        result.push( left.shift() );
+      }
+
+      while ( right.length > 0 ) {
+        result.push( right.shift() );
+      }
+
+      return result;
+
+    };
+
+    const sort = ( arr ) => {
+
+      if ( arr.length <= 1 ) return arr;
+
+      let left = [];
+      let right = [];
+
+      for ( let i = 0; i < arr.length; i++ ) {
+        let item = arr[ i ];
+        if ( i < ( arr.length / 2 ) ) {
+          left.push( item );
+        } else {
+          right.push( item );
+        }
+      }
+
+      left = sort( left );
+      right = sort( right );
+
+      return merge( left, right );
+
+    };
+
+    return sort;
+
+  } )()
 
 
 };
