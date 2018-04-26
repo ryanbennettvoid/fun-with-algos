@@ -6,6 +6,7 @@
 - Binary Search
 - QuickSort
 - Fibonacci Sequence
+- Merge Sort
 
 #### Test
 
