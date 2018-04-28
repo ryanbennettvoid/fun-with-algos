@@ -206,7 +206,38 @@ module.exports = {
 
     return sort;
 
-  } )()
+  } )(),
+
+  // Array Flatten:
+  // ---
+  // Reference: Funky custom solution, inspired by answers from:
+  //  -> https://stackoverflow.com/questions/10865025/merge-flatten-an-array-of-arrays-in-javascript
+  // Some tests taken from:
+  //  -> https://github.com/elidoran/flatten-array/blob/master/test/lib/test.coffee
+  // ---
+  // Mutates/consumes original array so that we can check length > 0 
+  // and uses `result` as an accumulator
+
+  arrayFlatten: ( () => {
+
+    const flatten = ( arr, result=[] ) => {
+
+      if ( !Array.isArray( arr ) ) return arr;
+
+      while ( arr.length > 0 ) {
+        const item = flatten( arr.shift(), result );
+        // Ensure not an array otherwise we end up with 
+        // funky extra arrays of circular references.
+        if ( !Array.isArray( item ) ) result.push( item );
+      }
+
+      return result;
+
+    };
+
+    return flatten;
+
+  } )(),
 
 
 };

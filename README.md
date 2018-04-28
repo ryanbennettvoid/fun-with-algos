@@ -7,6 +7,7 @@
 - QuickSort
 - Fibonacci Sequence
 - Merge Sort
+- Array Flatten
 
 #### Test
 
