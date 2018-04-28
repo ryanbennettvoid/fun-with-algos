@@ -239,5 +239,23 @@ module.exports = {
 
   } )(),
 
+  // Factorial:
+  // ---
+  // Reference: https://en.wikipedia.org/wiki/Factorial
+  // ---
+  // Interestingly similar to fibonacci recursion with
+  // regards to base cases and descending input.
+
+  factorial: ( () => {
+
+    const fac = ( n ) => {
+      if ( n === 0 ) return 1;
+      if ( n === 1 ) return 1;
+      return n * fac( n - 1 );
+    };
+
+    return fac;
+
+  } )(),
 
 };

@@ -8,6 +8,7 @@
 - Fibonacci Sequence
 - Merge Sort
 - Array Flatten
+- Factorial
 
 #### Test
 
