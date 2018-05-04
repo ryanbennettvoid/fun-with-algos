@@ -9,6 +9,7 @@
 - Merge Sort
 - Array Flatten
 - Factorial
+- Insertion Sort
 
 #### Test
 
