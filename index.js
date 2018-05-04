@@ -258,4 +258,32 @@ module.exports = {
 
   } )(),
 
+  // Insertion Sort
+  // ---
+  // Reference: https://en.wikipedia.org/wiki/Insertion_sort
+  // ---
+
+  insertionSort: ( arr ) => {
+
+    let i = 1;
+
+    while ( i < arr.length ) {
+
+      let j = i;
+
+      // if the previous position is greater than this one, swap
+      while ( j > 0 && arr[ j - 1 ] > arr[ j ] ) {
+        const tmp = arr[ j - 1 ];
+        arr[ j - 1 ] = arr[ j ];
+        arr[ j ] = tmp;
+        j--;
+      }
+
+      i++;
+
+    }
+
+  },
+
 };
+
