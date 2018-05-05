@@ -7,3 +7,4 @@ require( './merge-sort.js' );
 require( './array-flatten.js' );
 require( './factorial.js' );
 require( './insertion-sort.js' );
+require( './bubble-sort.js' );

@@ -10,6 +10,7 @@
 - Array Flatten
 - Factorial
 - Insertion Sort
+- Bubble Sort
 
 #### Test
 

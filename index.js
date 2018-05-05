@@ -285,5 +285,39 @@ module.exports = {
 
   },
 
+  // Bubble Sort
+  // ---
+  // Reference: https://en.wikipedia.org/wiki/Insertion_sort
+  // ---
+  // Swaps adjacent pairs that need reordering.
+  // "The algorithm needs one whole pass without any swap to know it is sorted."
+
+  bubbleSort: ( arr ) => {
+
+    let didSwap = false;
+
+    do {
+
+      // reset to false after each pass
+      didSwap = false;
+
+      for ( let i = 1; i < arr.length; i++ ) {
+
+        // if last item is greater than current item, swap
+        if ( arr[ i - 1 ] > arr[ i ] ) {
+          const tmp = arr[ i - 1 ];
+          arr[ i - 1 ] = arr[ i ];
+          arr[ i ] = tmp;
+          didSwap = true;
+        }
+
+      }
+
+      // only loop again if we've swapped, otherwise done
+
+    } while ( didSwap )
+
+  }
+
 };
 
